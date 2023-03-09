@@ -20,3 +20,6 @@
   - Нужно было доустановить:
     - `rails importmap:install`
     - `rails turbo:install stimulus:install`
+## Errors and solutions 
+- Docker: image has dependent child images:
+  - https://gist.github.com/Siva-Charan/db7bd84ad2ca2b0779d87a75e6bb4176
