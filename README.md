@@ -1,24 +1,20 @@
 # README
+# Туториал для разработки внутри контейнера (для меня) 
+- Создать образ: \
+`docker build -t ruby:fawking .`
+- Запустить контейнер: \
+`docker run -d -it --name <container_name> --mount type=bind,source="$(pwd)"/,target=/usr/src/app ruby:fawking`
+- Зайти в контейнер, чтобы вносить изменения: \
+`docker exec -it <container_id> bash`
+- Сохранить изменения, совершенные в контейнере: \
+`docker commit <container_id> <changed>/fawkingruby:<tag>`
+- Дальше можно просто стартовать сохраненный контейнер:\
+`docker start <saved_container_id>`
+- И для внесения изменений заходить уже в него: \
+`docker exec -it <saved_container_id> bash`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Troubleshooting
+- Не работало удаление с помощью `turbo_method`
+  - Нужно было доустановить:
+    - `rails importmap:install`
+    - `rails turbo:install stimulus:install`
