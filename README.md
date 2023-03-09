@@ -1,4 +1,6 @@
-# README
+Проект написан в образовательных целях (изучение Ruby on Rails и Docker) 
+по [данному туториалу.](https://guides.rubyonrails.org/getting_started.html) 
+
 # Туториал для разработки внутри контейнера (для меня) 
 - Создать образ: \
 `docker build -t ruby:fawking .`
